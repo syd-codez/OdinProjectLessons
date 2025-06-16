@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Library</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .library {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .book-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .book-card h3 {
+      margin: 0 0 10px;
+    }
+    .book-card p {
+      margin: 4px 0;
+    }
+
+    #newBook {
+        display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    #newBook input {
+        width: 200px;
+        height: 30px;
+        margin: 1%;
+    }
+
+    .btn {
+        height: 30px;
+        width: 100px;
+        border: 0px;
+        background-color:rgb(41, 30, 201);
+        margin: 1% 5%;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: black;
+        transition: 1s;
+    }
+
+    .btnDiv {
+        display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Library</h1>
+  <div class="library" id="libraryDisplay"></div>
+
+    <div id="newBook">
+        <div id="btnDiv">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="author" placeholder="Author">
+            <input type="text" id="pages" placeholder="Pages">
+        </div>
+        
+        <div id="btnDiv">
+            <button class="btn addBtn">Add to Library</button>
+        </div>
+    </div>
+  <script src="library.js"></script>
+</body>
+</html>
